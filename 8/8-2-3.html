@@ -1,14 +1,27 @@
 <html>
+
 <head>
     <title>範例 8-2-3.html</title>
     <script>
-    for(let i = 0; i < 10; i++) {
-        console.log('The value is ' + i);
-    }
-    // 輸出 The value is 0 …. The value is 9
+        for (let i = 0; i < 10; i++) {
+            console.log('The value is ' + i);
+        }
+        // let i = 0先設i 再給範圍 然後i在++   for迴圈的格式
+        // i++ ===  i=i+1
+        // i+=2 === i=i+2
+        // 輸出 The value is 0 ... The value is 9
+        for (let i = 0; i < 10; i += 2) {
+            console.log(' value is ' + i);
+        }
+        //for (let i = 0; i++; i < 10) {
+        //    console.log('The value is ' + i);
+        // }不能倒過來
+
     </script>
 </head>
+
 <body>
 
 </body>
+
 </html>
