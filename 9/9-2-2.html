@@ -22,9 +22,23 @@
     //增加物件屬性：
     cat['eye_color'] = 'black';
     cat.habbit = 'play with slave';
+//輸出的物件為
+//Object
+// ability: {jump: ƒ, sound: ƒ, sleep: ƒ}
+// color: "Tangerine"
+// eye_color: "black"
+// habbit: "play with slave"
+// legs: 4
+// name: "Darren"
 
     // console.dir 可以列出物件（或陣列）的內容
-    console.dir( cat , {depth: null} ); 
+    // depth顯示裡面的 
+    // null全部
+    console.dir( cat , {depth: null} );
+    console.log (cat['eye_color']);
+    console.log (cat.habbit);
+    cat.ability.jump();
+    
     </script>
 </head>
 <body>

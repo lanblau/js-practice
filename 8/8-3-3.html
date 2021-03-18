@@ -5,19 +5,26 @@
     <script>
         let count = 0;
         while (count <= 7) {
-            //count 遞增到 5 的時候，跳出迴圈
+            //count 遞增到 5 的時候，跳出迴圈，不繼續執行
             // if(count == 5){ break; } {}可略
             if (count == 5) break;
             console.log(`count = ${count}`);
             count++; //千萬記得要遞增，不然會變成無限迴圈
         }
+// 單只有上方的執行結果
+//  count = 0
+//  count = 1
+//  count = 2
+//  count = 3
+//  count = 4
 
-
-        while (count <= 7) {
-            if (count == 6) break;
-            console.log(`count=${count}`);
-            count++;
-        }
+// 跳出來的5繼續執行
+        // while (count <= 7) {
+        //     if (count == 6) break;
+        //     console.log(`count=${count}`);
+        //     count++;
+        // }
+// 上加下的執行結果
 //count = 0
 //count = 1
 //count = 2

@@ -1,21 +1,69 @@
 <html>
+
 <head>
     <title>範例 9-3-1.html</title>
     <script>
-    let obj = {
-        fname: 'Darren',
-        lname: 'Yang',
-        age: null,
-        lineId: 'telunyang'
-    };
+        //in
+        let obj = {
+            fname: 'Darren',
+            lname: 'Yang',
+            age: null,
+            lineId: 'telunyang'
+        };
 
-    //查看所有屬性
-    for(let attr in obj) {
-        console.log(`The property in object variable is ${attr}`);
-    } 
+        //查看所有屬性attr
+        for (let attr in obj) {
+            console.log(`The property in object variable is ${attr}`);
+            console.log(obj[attr]);
+            //輸出陣列
+        }
+        // attr跟obj均是自己取的
+        // 輸出The property in object variable is fname
+        //Darren
+        //  The property in object variable is lname
+        //Yang
+        //  The property in object variable is age
+        //null
+        //  The property in object variable is lineId
+        //telunyang
+
+        // for(let attr in obj){
+        //     console.log(`The property in object variable is ${attr}`);
+        // }
+
+        let cb = ['a', 'b', 'c'];
+        for (let go in cb) {
+            console.log(`The index number in array variable is ${go}`);
+        }
+        //輸出The index number in array variable is 0
+        //  The index number in array variable is 1
+        //  The index number in array variable is 2
+
+
+        //of
+        let arr = ['a', 'b', 'c'];
+        for (let value of arr) {
+            console.log(`The value in array variable is ${value}`);
+        }
+        //輸出The value in array variable is a
+        //The value in array variable is b
+        //The value in array variable is c
+        let ob = {
+            fname: 'Darren',
+            lname: 'Yang',
+            age: null,
+            lineId: 'telle'
+        };
+        for (let value of ob) {
+            console.log(`The value in object variable is ${value}`);
+        }
+        //輸出錯誤
+        //用of要用陣列才能輸出 要有[0],[1],[2]...
     </script>
 </head>
+
 <body>
 
 </body>
+
 </html>
