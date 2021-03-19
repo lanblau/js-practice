@@ -2,35 +2,35 @@
 
 <head>
     <title>unshift+shift</title>
-    <script>
-   //.unshift是將項目加入陣列最前方
-    //刪除陣列第一個元素，使用 shift()：
-    let listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
-    listOfName.shift();
-    console.log(listOfName); // 輸出 [ 'Bill', 'Cook', 'Darren' ]
-    
-    //有時候從尾端刪除的陣列資料，需要放在陣列前端，使用 unshift()：
-    listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
-    let name = listOfName.pop(); // 從陣列尾端刪除(取出) Darren 
-    listOfName.unshift('PIKA');  //加PIKA到陣列最前方
-    console.log(listOfName);//輸出['PIKA','Alex', 'Bill', 'Cook']
-    </script>
-    <!-- <script>
-        //刪除陣列第一個元素，使用 shift()：
-        let listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
-        listOfName.shift();
-        console.log(listOfName); // 輸出 [ 'Bill', 'Cook', 'Darren' ]
 
-        //有時候從尾端刪除的陣列資料，需要放在陣列前端，使用 unshift()：
-        listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
-        let name = listOfName.pop(); // 從陣列尾端刪除 Darren (name=Darren)//輸出['Alex', 'Bill', 'Cook']
-        listOfName.unshift(name); // 將刪除的陣列尾端資料放到陣列前端
-        console.log(listOfName); // 輸出 [ 'Darren', 'Alex', 'Bill', 'Cook' ]
-    </script> -->
 </head>
 
 <body>
-
+    <script>
+        //.unshift是將項目加入陣列最前方
+         //刪除陣列第一個元素，使用 shift()：
+         let listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
+         listOfName.shift();
+         console.log(listOfName); // 輸出 [ 'Bill', 'Cook', 'Darren' ]
+         
+         //有時候從尾端刪除的陣列資料，需要放在陣列前端，使用 unshift()：
+         listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
+         let name = listOfName.pop(); // 從陣列尾端刪除(取出) Darren 
+         listOfName.unshift('PIKA');  //加PIKA到陣列最前方
+         console.log(listOfName);//輸出['PIKA','Alex', 'Bill', 'Cook']
+         </script>
+         <!-- <script>
+             //刪除陣列第一個元素，使用 shift()：
+             let listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
+             listOfName.shift();
+             console.log(listOfName); // 輸出 [ 'Bill', 'Cook', 'Darren' ]
+     
+             //有時候從尾端刪除的陣列資料，需要放在陣列前端，使用 unshift()：
+             listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
+             let name = listOfName.pop(); // 從陣列尾端刪除 Darren (name=Darren)//輸出['Alex', 'Bill', 'Cook']
+             listOfName.unshift(name); // 將刪除的陣列尾端資料放到陣列前端
+             console.log(listOfName); // 輸出 [ 'Darren', 'Alex', 'Bill', 'Cook' ]
+         </script> -->
 </body>
 
 </html>
