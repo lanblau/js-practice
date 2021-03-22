@@ -15,13 +15,21 @@
 
     //有回傳值的暱名函式
     let getMessage = function(name) {
+        return 'Good job!'+ name;
+    }
+    let Message = function(name) {
         return 'Good job!';
     }
     
     //依序執行各個函式
-    say();
-    greet('Alex');
+    say(); //Hello World!
+    greet('Alex');  //Hello, Alex
     console.log(getMessage()); 
+    //Good job!undefined
+    console.log(getMessage('JOHN')); 
+    //Good job!JOHN
+    console.log(Message());
+    //Good job!
     </script>
 </head>
 <body>

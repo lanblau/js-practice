@@ -9,13 +9,22 @@
             console.log('Hello World!');
         }
     )();
+//輸出Hello World!
 
     //顯示在 <body> 當中
+    // (
+    //     function () {
+    //         document.write('Good job!');
+    //     }
+    // )();
+    // 頁面上出現Good job!
     (
-        function () {
-            document.write('Good job!');
+        function (name) {
+            document.write('Good job!'+name);
         }
-    )();
+    )('google');
+     //Good job!google
+   
 
     //跳出訊息
     (
@@ -23,6 +32,11 @@
             alert('Good job! ' + name);
         }
     )('Darren');
+    //跳出 Good job! Darren
+    (function(people){
+        alert('hahaha'+people);
+    })('flower');
+    //跳出hahahaflower
     </script>
 </head>
 <body>
