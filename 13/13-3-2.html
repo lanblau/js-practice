@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>範例 13-3-2.html</title>
-    <script>
+    <!-- <script>
     //宣告全域變數
     strNum = 9487;
 
     //定義函式
     function makeFunc(){
-        //宣告變數
+        //宣告區域變數
         let strName = 'Bill';
 
         //內部函式
@@ -23,9 +24,25 @@
 
     //執行函式
     makeFunc();
+
+    //輸出 Bill 說: 9487
+    </script> -->
+    <script>
+        num = 8888;
+        function makefun() {
+            let strname = 'bike';
+            let displayname = function () {
+                console.log(strname + ' say:' + num);
+            }
+            displayname();
+        }
+        makefun();
+        // 輸出 bike say:8888
     </script>
 </head>
+
 <body>
 
 </body>
+
 </html>

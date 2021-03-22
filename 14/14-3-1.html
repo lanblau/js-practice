@@ -7,7 +7,9 @@
 
     <script>
     //以 function 這個關鍵字的來建立類別（class）
-    var Person = function (firstName) {
+    // 可用var 或是 let
+    // 習慣用大寫開頭Person
+   var Person = function (firstName) {
         //以 this 關鍵字作為實體本身
         this.firstName = firstName;
     };
@@ -24,8 +26,8 @@
     var person2 = new Person("Bill");
 
     //輸出兩個 person 的 firstName
-    console.log( person1.firstName );
-    console.log( person2.firstName );
+    console.log( person1.firstName ); //'Alex'
+    console.log( person2.firstName ); //'Bill'
 
     person1.sayHello(); // "Hello, I'm Alice"
     person2.sayHello(); // "Hello, I'm Bob"

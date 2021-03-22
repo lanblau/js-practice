@@ -8,7 +8,7 @@
     
     //字串變數，預設空值
     let strTime = '';
-
+    
     //串接時間
     strTime += date.getFullYear() // 2019，西元年
     strTime += date.getMonth() + 1 // 月份，6 月時執行會出現 5，比正常值少 1，記得加 1
@@ -19,6 +19,10 @@
 
     //輸出結果
     console.log(strTime);
+
+    let time=new Date().getDay();
+    console.log(time); //今天星期??
+    
     </script>
 </head>
 <body>

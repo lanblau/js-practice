@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物件導向</title>
+</head>
+
+<body>
+    <script>
+        let person = function (name) {
+            this.hands = 2;
+            this.name = name;
+        }
+        let person01 = new person('Alex');
+        let person02 = new person();
+
+        console.log(person01.hands);
+        //輸出2
+        console.log(person01.name);
+        //輸出 Alex
+        console.log(person01);
+        //輸出 person {hands: 2, name: "Alex"}
+        console.log(person02);
+        //輸出 person {hands: 2, name: undefined}
+    </script>
+</body>
+
+</html>
