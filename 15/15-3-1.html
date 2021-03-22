@@ -25,6 +25,7 @@
     }
     
     //開始累加
+    // startCount() 設定 onclick="startCount()"的功能
     function startCount() {
         //週期性在指定毫秒後，進行累加
         t = setInterval(function(){ count() }, 1000);
@@ -37,6 +38,7 @@
     }
     
     //結束累加
+    //stopCount() 設定 onclick="stopCount()"
     function stopCount() {
         //結束 setInterval
         clearInterval(t);

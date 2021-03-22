@@ -22,15 +22,19 @@
 
         //進行數字的累加
         countNum = countNum + 1;
+        // countNum++;
 
         //運用遞迴的概念，在指定毫秒後進行累加
         t = setTimeout(function(){ count() }, 1000);
     }
-    
+    // t =setTimeout(function(){ count() }, 1000); 要放裡面才能執行  count()累加
+
     //開始累加
     function startCount() {
-        //執行累加用的函式
+        //執行累加用的函式       
          count();
+        //  或者直接執行setInterval 15-3-1
+        // t = setInterval(function(){ count() }, 1000);
     }
     
     //結束累加
