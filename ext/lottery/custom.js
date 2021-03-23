@@ -29,7 +29,7 @@ function getPowerNum() {
          * 如果有，就將 i 遞減，等於讓這輪重跑一次。
          */
 
-        //隨機取得 1 ~ 38 之間的數字
+        //威力彩隨機取得 1 ~ 38 之間的數字 一個號碼一顆球
         let num = getRandom(38);
 
         //檢查是否有出現過(重複)
@@ -48,7 +48,7 @@ function getPowerNum() {
      * 參考網頁:
      * https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
      */
-    arr.sort(function(a, b) {
+    arr.sort(function (a, b) {
         /**
          * 用數字排序
          * a - b 指的是由小到大
@@ -60,11 +60,13 @@ function getPowerNum() {
          */
         return a - b;
     });
+    //console.log(arr);
 
     //第二區號碼
     n = getRandom(8);
 
     //因為威力彩有分兩區，第二區為 01 ~ 08 隨機一數字，所以我們在回傳時加上。
+    // .join在陣列中加入
     return `第一區號碼為： ${arr.join(",")}，第二區號碼為： ${n}`;
 }
 

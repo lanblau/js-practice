@@ -4,12 +4,14 @@
     <title>範例 17-1-1.html</title>
 </head>
 <body>
+    <!-- 叫出js的function-->
     <a href="javascript:OpenNewWindow();">開啟新視窗</a>
     <a href="javascript:CloseNewWindow();">關閉新視窗</a>
     
     <script>
     //宣告變數，給 window 物件用
     var myWin = null;
+    // var myWin ;
 
     //定義開啟新視窗的函式
     function OpenNewWindow(){
@@ -17,6 +19,7 @@
             "https://www.iii.org.tw/", 
             "新開視窗: 資策會官網", 
             "height=600, width=800");
+            // 固定網址格式
     } 
     
     //定義開啟新視窗的函式
@@ -29,5 +32,19 @@
         }
     }
     </script>
+    <!-- <script>
+        var myWin=null;
+        function OpenNewWindow(){
+            myWin=window.open("https://www.iii.org.tw/", 
+            "新開視窗: 資策會官網", 
+            "height=600, width=800");
+        }
+        function CloseNewWindow(){
+            myWin.close();
+            if(myWin.closed){
+                alert('關閉了新視窗');
+            }
+        }
+    </script> -->
 </body>
 </html>
