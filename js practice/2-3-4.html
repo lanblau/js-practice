@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-3-4</title>
+</head>
+<body>
+    <button id="myBtn" value='Hi!' onclick="getValue()"></button>
+    <!-- onclick="getValue" click getValue這個function時 執行內容  -->
+    <script>
+        function getValue(){
+            var btn= document.getElementById('myBtn');
+            alert(btn.value);
+        }
+        // 設(var) btn為 從document取得id[.getElementById]id="myBtn"
+        // alert(btn.value);彈出視窗為var btn的值value
+    </script>
+</body>
+</html>
