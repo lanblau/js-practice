@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>範例 18-2-1.html</title>
+    <title>範例 addEventListener 18-2-1.html</title>
 </head>
 <body>
     <button id="btn" style="width: 200px; height: 100x;">按下後改變文字</button>
@@ -11,6 +11,7 @@
     <img class="puppy" src="https://i.pinimg.com/600x315/8d/4c/82/8d4c82be4f898f25a465919698566b57.jpg" />
 
     <script>
+        // .addEventListener 常用
     //對 button#btn 註冊 click 事件
     document.getElementById('btn').addEventListener('click', function(event){
         //跳出文字訊息
@@ -21,6 +22,8 @@
     });
 
     //對 div 註冊兩個事件，分別是滑鼠移入和移出
+    // ('div')[0] 第0個div  如果有其他項 可以用[1][2]去寫
+    // 先設名字再叫出 let div
     let div = document.getElementsByTagName('div')[0];
     div.addEventListener('mousemove', function(event){
         this.style.backgroundColor = '#33ffff';
@@ -30,6 +33,9 @@
     });
 
     //對 img.puppy 註冊滑鼠移入事件
+    // .querySelector 選擇這個元素
+    // .querySelectorAll 去選全部 可以做for迴圈
+    // .setAttribute 設定屬性 可以設src 或是alt...
     document.querySelector('img.puppy').addEventListener('mousemove', function(event){
         this.setAttribute(
             "src", 

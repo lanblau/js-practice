@@ -4,10 +4,12 @@
     <title>範例 18-1-2.html</title>
 </head>
 <body>
+    <!-- 先加入 onfocus="showFocus()" 叫出js function-->
     <input type="text" name="txt" id="txt" onfocus="showFocus()" />
 
     <script>
     //在文字欄位中，寫入文字
+    // 再下定義
     function showFocus(){
         document.getElementById('txt').value = '你好!!';
     }
