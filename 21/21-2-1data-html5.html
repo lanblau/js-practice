@@ -7,7 +7,7 @@
     <input type="text" id="txt" value="" />
     
     <script>
-    //取得文字欄位的元素，並設定自訂屬性
+    //取得文字欄位的元素，並設定自訂屬性 設定
     let txt = document.querySelector("input#txt");
     txt.setAttribute("name", "txt");
     txt.setAttribute("value", "1234");
@@ -16,7 +16,7 @@
     txt.setAttribute("data-description", "可以輸入任何文字");
 
     //輸出自訂屬性到網頁上
-    document.write("<hr />");
+    document.write("<hr />");    //線
     document.write( txt.getAttribute('data-title') + "<br />" );
     document.write( txt.getAttribute('data-price') + "<br />" );
     document.write( txt.getAttribute('data-description') + "<br />" );
