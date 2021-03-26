@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str03 = `A0001, B0978, X9487, Y8787, Z5432`;
+        let re03 = /[A-Z][0-9]+/g;
+        let match03 = null;
+        while ((match03 = re03.exec(str03)) !== null) {
+            console.log(`==============================`);
+            console.log(match03);
+        }
+    </script>
+</body>
+
+</html>

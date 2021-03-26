@@ -12,8 +12,9 @@ while( (match = pattern.exec(html)) !== null ){
      */
     arr.push(match[0]);
 }
+// console.log(arr); //抓到很多重複的
 
-//先將貼圖資訊透過 Set 去掉重複，再透過 Array.from 轉回陣列型態
+//先將貼圖資訊透過 Set 去掉重複，再透過 Array.from 轉回陣列型態 prototype型式
 let mySet = new Set(arr);
 let newArr = Array.from(mySet);
 
