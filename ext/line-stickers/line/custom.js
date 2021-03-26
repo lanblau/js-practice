@@ -2240,6 +2240,7 @@ if(eventCategory && adId){
 </html>
 `;
 //貼圖網址 style="background-image:url(https://stickershop.line-scdn.net/stickershop/v1/sticker/371730902/android/sticker.png;compress=true);"
+// let pattern = /https?:\/\/stickershop\.line-scdn\.net\/stickershop\/v1\/sticker\/([0-9]+)\/android\/sticker\.png/g;
 let pattern = /https?:\/\/stickershop\.line-scdn\.net\/stickershop\/v1\/sticker\/([0-9]+)\/android\/sticker\.png/g;
 let match = null;
 let arr = [];
@@ -2253,3 +2254,19 @@ while ((match = pattern.exec(html)) !== null) {
 // console.log(arr); //抓到很多重複的
 let mySet = new Set(arr);
 let newArr = Array.from(mySet);
+
+let ul = document.querySelector("ul#myList");
+
+for (let link of newArr) {
+    if ((match = pattern.exec(link)) !== null) {
+        let li = document.createElement("li");
+        let img = documment.createElement("img");
+        img.setAttribute("src", match[0]);
+
+        let textNode = document.createTextNode(`檔案名稱:${match[1]}.png`);
+        li.appendChild(img);
+        li.appendChild(textNode);
+        ul.appendChild(li);
+    };
+};
+// console.log(li);
