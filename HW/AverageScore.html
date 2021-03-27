@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>score</title>
+    <style>
+        body {
+            background-color: rgb(236, 249, 253);
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            color: #707070;
+            background-color: #cff0fd;
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 300;
+            font-size: 2rem;
+            padding: 0 100px;
+            margin: 10px 0;
+        }
+
+        #table1 {
+            border: none;
+            border-collapse: collapse;
+            margin: 0 auto 14%;
+        }
+
+        th {
+            border: none;
+            border-bottom: 1px solid #74CEEB;
+            color: #707070;
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 200;
+            font-size: 1.5rem;
+            text-align: center;
+            white-space: nowrap;
+            /* text-indent: 10px; */
+            padding: 0 10px;
+        }
+
+        td {
+            border: none;
+            /* white-space: nowrap; */
+            color: #7E5757;
+            text-align: center;
+            padding: 15px;
+            font-family: 'Segoe UI';
+        }
+
+        td.news {
+            border-left: 1px solid#707070;
+            /* min-width: 750px; */
+        }
+    </style>
+</head>
+
+<body>
+    <p>Score</p>
+    <div>
+        <table id="table1" width="200" border="1" summary="表名">
+            <tbody>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">English</br> Score</th>
+                    <th scope="col">Math</br> Score</th>
+                </tr>
+                <tr>
+                    <td class="time">Alex</td>
+                    <td class="news">18 </td>
+                    <td class="news">87 </td>
+                    <td class="news">90 </td>
+                </tr>
+                <tr>
+                    <td class="time">Bill</td>
+                    <td class="news">19 </td>
+                    <td class="news">95 </td>
+                    <td class="news">98 </td>
+                </tr>
+                <tr>
+                    <td class="time">Cook</td>
+                    <td class="news">17</td>
+                    <td class="news">100</td>
+                    <td class="news">73</td>
+                </tr>
+                <tr>
+                    <th class="time">Average </br>Score</th>
+                    <td class="news"> </td>
+                    <!-- <td class="news"></td> -->
+                    <!-- <td class="news"></td> -->
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let list = [
+            {
+                name: "Alex",
+                age: 18,
+                eng_score: 87,
+                math_score: 90
+            },
+            {
+                name: "Bill",
+                age: 19,
+                eng_score: 95,
+                math_score: 98
+            },
+            {
+                name: "Cook",
+                age: 17,
+                eng_score: 100,
+                math_score: 73
+            }
+        ]
+        // console.log(list[0]);
+        let listTotal = list.length;
+        let eng_scoreTotal = 0;
+        let math_scoreTotal = 0;
+        for (let i = 0; i < listTotal; i++) {
+            eng_scoreTotal += list[i].eng_score;
+            math_scoreTotal += list[i].math_score;
+        }
+        // console.log('英文總分：' + eng_scoreTotal);
+        // console.log('數學總分：' + math_scoreTotal);
+        let engAverageScore = eng_scoreTotal / listTotal;
+        let mathAverageScore = math_scoreTotal / listTotal;
+        //console.log(engAverageScore); //94
+        //console.log(mathAverageScore); //87
+        // document.write('英文平均分數：' + engAverageScore);
+        // document.write('</br>');
+        // document.write('數學平均分數：' + mathAverageScore);
+
+        let tdM = document.createElement("td");
+        let tdE = document.createElement("td");
+        // td.setAttribute("class", news);
+        // news.style.borderLeft = '1px solid #707070';
+
+        let textNodeE = document.createTextNode(`${engAverageScore}`);
+        let textNodeM = document.createTextNode(`${mathAverageScore}`);
+        tdE.appendChild(textNodeE);
+        tdM.appendChild(textNodeM);
+        let tr = document.querySelectorAll('tr')[4];
+        tr.appendChild(tdE);
+        tr.appendChild(tdM);
+
+        let tdStyleE = document.querySelectorAll('td')[13];
+        let tdStyleM = document.querySelectorAll('td')[14];
+        tdStyleE.style.borderLeft = '1px solid #707070';
+        tdStyleM.style.borderLeft = '1px solid #707070';
+    </script>
+
+</body>
+
+</html>

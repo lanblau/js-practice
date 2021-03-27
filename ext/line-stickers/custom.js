@@ -2295,8 +2295,8 @@ for (let link of newArr) {
     li.appendChild(img);
     li.appendChild(textNode);
 
-    //將 li 放到 ul 當中
-    ul.appendChild(li);
+    //將 li 放到 ul 當中 
+    .aulppendChild(li);
 
     /** 
      * 如果 body 裡面沒有 ul#myList 元素，
