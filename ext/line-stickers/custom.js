@@ -2269,10 +2269,10 @@ let ul = document.querySelector("ul#myList");
  */
 // let new_ul = document.createElement("ul");
 // new_ul.setAttribute("id", "myList");
-
+let re = /https?:\/\/stickershop\.line-scdn\.net\/stickershop\/v1\/sticker\/([0-9]+)\/android\/sticker\.png/;
 //逐一建立 li，並放置圖片資訊在 li 當中
 for (let link of newArr) {
-  if ((match = pattern.exec(link)) !== null) {
+  if ((match = re.exec(link)) !== null) {
     /**
       * match[0] = full match
       * eg. https://stickershop.line-scdn.net/stickershop/v1/sticker/380512276/android/sticker.png
@@ -2296,7 +2296,7 @@ for (let link of newArr) {
     li.appendChild(textNode);
 
     //將 li 放到 ul 當中 
-    .aulppendChild(li);
+    ul.appendChild(li);
 
     /** 
      * 如果 body 裡面沒有 ul#myList 元素，

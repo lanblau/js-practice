@@ -1913,6 +1913,12 @@ if(eventCategory && adId){
       });
     });
   </script>
+
+
+
+
+
+
 </body>
 </html>
 `;
@@ -1923,8 +1929,7 @@ let match = null;
 let arr = [];
 while ((match = pattern.exec(html)) !== null) {
     
-    // match[0] = full match
-     
+    // match[0] = full match     
     arr.push(match[0]);
 }
 // console.log(arr); //抓到很多重複的
@@ -1932,23 +1937,49 @@ let mySet = new Set(arr);
 let newArr = Array.from(mySet);
 
 let ul = document.querySelector("ul#myList");
+let re = /https?:\/\/stickershop\.line-scdn\.net\/sticonshop\/v1\/sticon\/5f718049179bfc5d54cc3a52\/iPhone\/([0-9]+)\.png/;
 
 for (let link of newArr) {
-    if ((match = pattern.exec(link)) !== null) {
+  if ((match = re.exec(link)) !== null) {
         let li = document.createElement("li");
         let img = document.createElement("img");
         img.setAttribute("src", match[0]);
 
-        let textNode = document.createTextNode(`檔案名稱:${match[1]}.png`);
-        li.appendChild(img);
-        li.appendChild(textNode);
-        ul.appendChild(li);
+    let para = document.createElement("p");
+    //給para指定屬性 className
+    para.className = "name";
+
+    let textNode = document.createTextNode(`檔案名稱:${match[1]}.png`);
+    li.appendChild(img);
+    para.appendChild(textNode);
+    li.appendChild(para);
+    ul.appendChild(li);
     };
 };
 
+
 let listStyle = document.querySelectorAll('li');
 for (let i = 0; i < listStyle.length; i++) {
-  listStyle[i].style.listStyleType = 'none'; 
+  listStyle[i].style.listStyleType = 'none';
+  listStyle[i].style.display = 'flex';
+  listStyle[i].style.flexDirection = 'column';
+  listStyle[i].style.margin = '20px 50px';
+};
+
+
+//不會被css格式蓋掉
+//單獨變
+let cchange = document.querySelectorAll('p.name');
+for (var i = 0; i < cchange.length; i++) {
+  // nodeType === 1 代表為實體 HTML 元素
+  if (cchange[i].nodeType === 1) {
+    cchange[i].addEventListener('mousemove', function () {
+      this.style.color = '#837969';
+    });
+    cchange[i].addEventListener('mouseout', function () {
+      this.style.color = '#f1d7cc';
+    });
+  }
 }
 
 // console.log(li);

@@ -1,3 +1,4 @@
+
 let html = `
 <!--
   ~ Copyright (c) 2018 LINE Corporation. All rights reserved.
@@ -2247,9 +2248,9 @@ let mySet = new Set(arr);
 let newArr = Array.from(mySet);
 
 let ul = document.querySelector("ul#myList");
-
+let re = /https?:\/\/stickershop\.line-scdn\.net\/stickershop\/v1\/sticker\/([0-9]+)\/android\/sticker\.png/;
 for (let link of newArr) {
-  if ((match = pattern.exec(link)) !== null) {
+  if ((match = re.exec(link)) !== null) {
     let li = document.createElement("li");
     let img = document.createElement("img");
     img.setAttribute("src", match[0]);
