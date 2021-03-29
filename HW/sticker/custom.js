@@ -2238,7 +2238,7 @@ if(eventCategory && adId){
 let pattern = /https?:\/\/stickershop\.line-scdn\.net\/stickershop\/v1\/sticker\/([0-9]+)\/android\/sticker\.png/g;
 let match = null;
 let arr = [];
-while ((match = pattern.exec(html)) !== null) {  
+while ((match = pattern.exec(html)) !== null) {
   //  match[0] = full match 
   arr.push(match[0]);
 }
@@ -2272,7 +2272,7 @@ for (let i = 0; i < listStyle.length; i++) {
   listStyle[i].style.listStyleType = 'none';
   listStyle[i].style.display = 'flex';
   listStyle[i].style.flexDirection = 'column';
-  listStyle[i].style.margin = '20px 50px';
+  listStyle[i].style.margin = '20px 6rem';
 };
 
 

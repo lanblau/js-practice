@@ -1928,9 +1928,9 @@ let pattern = /https?:\/\/stickershop\.line-scdn\.net\/sticonshop\/v1\/sticon\/5
 let match = null;
 let arr = [];
 while ((match = pattern.exec(html)) !== null) {
-    
-    // match[0] = full match     
-    arr.push(match[0]);
+
+  // match[0] = full match     
+  arr.push(match[0]);
 }
 // console.log(arr); //抓到很多重複的
 let mySet = new Set(arr);
@@ -1941,9 +1941,9 @@ let re = /https?:\/\/stickershop\.line-scdn\.net\/sticonshop\/v1\/sticon\/5f7180
 
 for (let link of newArr) {
   if ((match = re.exec(link)) !== null) {
-        let li = document.createElement("li");
-        let img = document.createElement("img");
-        img.setAttribute("src", match[0]);
+    let li = document.createElement("li");
+    let img = document.createElement("img");
+    img.setAttribute("src", match[0]);
 
     let para = document.createElement("p");
     //給para指定屬性 className
@@ -1954,7 +1954,7 @@ for (let link of newArr) {
     para.appendChild(textNode);
     li.appendChild(para);
     ul.appendChild(li);
-    };
+  };
 };
 
 
@@ -1963,7 +1963,7 @@ for (let i = 0; i < listStyle.length; i++) {
   listStyle[i].style.listStyleType = 'none';
   listStyle[i].style.display = 'flex';
   listStyle[i].style.flexDirection = 'column';
-  listStyle[i].style.margin = '20px 50px';
+  listStyle[i].style.margin = '20px 1rem';
 };
 
 
