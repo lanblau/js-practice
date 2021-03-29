@@ -20,9 +20,10 @@
              * 清空畫布
              * void ctx.clearRect(x, y, width, height);
              */
+            // 讓上1個矩形消失 畫出下一個 類似矩形一直位移
             ctx.clearRect(0, 0, 200, 200);
 
-            //繪製矩形
+            //繪製矩形 (x,y,長,寬)
             ctx.fillRect(position, 0, 20, 20);
 
             //每執行 setInterval，就將 position 位置加 1

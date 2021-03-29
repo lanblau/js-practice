@@ -33,7 +33,7 @@
             
             //畫實心圓的顏色
             ctx.fillStyle = 'gold';
-
+            //使用 let circle = function (x, y, radius, fillCircle) 去改數字
             //畫黃色實心圓
             circle(x, y, 8, true);
 
@@ -76,18 +76,22 @@
         }
 
         //主程式區域
+    // 定義  let drawBee = function(x, y)
         let x = 100;
         let y = 100;
 
         //設定每 30 毫秒執行一次
         setInterval(function(){
-            //清空畫布
+            //清空畫布 
+            //ctx.strokeRect(0, 0, 200, 200); 也會被清掉
+                   
             ctx.clearRect(0, 0, 200, 200);
 
             //畫蜜蜂。初始座標為 (100, 100)
             drawBee(x, y);
-
+            
             //改變當前座標 x,y 的值
+            //呼叫 let update = function(position)
             x = update(x);
             y = update(y);
 
